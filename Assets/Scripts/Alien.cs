@@ -11,6 +11,7 @@ public class Alien : MonoBehaviour
     public PlayerMovment player;
     public AliensMovement all;
     public GameObject lose;
+   
 
     void Start()
     {
@@ -51,6 +52,7 @@ public class Alien : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Edificio"))
         {
+            player.health = 0;
             lose.SetActive(true);
             Time.timeScale = 0;
 

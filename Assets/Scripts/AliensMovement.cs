@@ -54,7 +54,7 @@ public class AliensMovement : MonoBehaviour
         if(cooldown <= 0 && transform.childCount > 0)
         {
             dispara = Random.Range(0, transform.childCount);
-            GameObject enemyDispara = transform.GetChild(dispara).gameObject;//PASA ALGO
+            GameObject enemyDispara = transform.GetChild(dispara).gameObject;
             GameObject temp = Instantiate(balaEnemy, enemyDispara.transform.position, Quaternion.identity);
             Destroy(temp, 5);
             cooldown = resetCooldown;
